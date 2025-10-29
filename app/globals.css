@@ -71,7 +71,6 @@
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -119,7 +118,6 @@
   }
 }
 
-/* Adding scrollbar utilities for mobile horizontal scrolling */
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;

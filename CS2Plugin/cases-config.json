@@ -1,0 +1,216 @@
+{
+  "dropRates": {
+    "milSpec": 79.92,
+    "restricted": 15.98,
+    "classified": 3.2,
+    "covert": 0.64,
+    "rare": 0.26,
+    "statTrakChance": 10.0
+  },
+  "wearRanges": {
+    "factoryNew": { "min": 0.0, "max": 0.07 },
+    "minimalWear": { "min": 0.07, "max": 0.15 },
+    "fieldTested": { "min": 0.15, "max": 0.38 },
+    "wellWorn": { "min": 0.38, "max": 0.45 },
+    "battleScarred": { "min": 0.45, "max": 1.0 }
+  },
+  "cases": [
+    {
+      "id": "chroma_case",
+      "name": "Chroma Case",
+      "price": 2290,
+      "keyPrice": 2500,
+      "image": "chroma_case.png",
+      "contents": {
+        "milSpec": [
+          { "name": "MP9 | Deadly Poison", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "M249 | System Lock", "minFloat": 0.0, "maxFloat": 0.65 },
+          { "name": "Sawed-Off | Serenity", "minFloat": 0.0, "maxFloat": 0.58 },
+          { "name": "Glock-18 | Catacombs", "minFloat": 0.0, "maxFloat": 0.5 },
+          { "name": "SCAR-20 | Grotto", "minFloat": 0.06, "maxFloat": 0.8 },
+          { "name": "Dual Berettas | Urban Shock", "minFloat": 0.0, "maxFloat": 0.5 },
+          { "name": "XM1014 | Quicksilver", "minFloat": 0.0, "maxFloat": 0.08 }
+        ],
+        "restricted": [
+          { "name": "Desert Eagle | Naga", "minFloat": 0.0, "maxFloat": 0.58 },
+          { "name": "AK-47 | Cartel", "minFloat": 0.0, "maxFloat": 0.75 },
+          { "name": "M4A4 | 龍王 (Dragon King)", "minFloat": 0.0, "maxFloat": 0.7 },
+          { "name": "P250 | Muertos", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "MAC-10 | Malachite", "minFloat": 0.0, "maxFloat": 0.6 }
+        ],
+        "classified": [
+          { "name": "Galil AR | Chatterbox", "minFloat": 0.0, "maxFloat": 0.9 },
+          { "name": "M4A1-S | Hyper Beast", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "AWP | Man-o'-war", "minFloat": 0.1, "maxFloat": 0.9 }
+        ],
+        "covert": [
+          { "name": "AK-47 | Fire Serpent", "minFloat": 0.05, "maxFloat": 0.76 },
+          { "name": "M4A4 | Howl", "minFloat": 0.0, "maxFloat": 0.99 }
+        ],
+        "rare": [
+          { "name": "Karambit", "finishes": ["Doppler", "Fade", "Tiger Tooth", "Marble Fade", "Autotronic"] },
+          { "name": "Bayonet", "finishes": ["Doppler", "Fade", "Tiger Tooth", "Marble Fade", "Autotronic"] },
+          { "name": "Butterfly Knife", "finishes": ["Doppler", "Fade", "Tiger Tooth", "Marble Fade", "Autotronic"] }
+        ]
+      }
+    },
+    {
+      "id": "chroma_2_case",
+      "name": "Chroma 2 Case",
+      "price": 2290,
+      "keyPrice": 2500,
+      "image": "chroma_2_case.png",
+      "contents": {
+        "milSpec": [
+          { "name": "Five-SeveN | Monkey Business", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "MP7 | Armor Core", "minFloat": 0.0, "maxFloat": 0.9 },
+          { "name": "Sawed-Off | Origami", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "P250 | Valence", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Desert Eagle | Bronze Deco", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "CZ75-Auto | Pole Position", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "UMP-45 | Grand Prix", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "restricted": [
+          { "name": "AWP | Worm God", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "AK-47 | Elite Build", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "MAG-7 | Heat", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Negev | Man-o'-war", "minFloat": 0.1, "maxFloat": 0.9 },
+          { "name": "MAC-10 | Neon Rider", "minFloat": 0.0, "maxFloat": 0.8 }
+        ],
+        "classified": [
+          { "name": "Galil AR | Eco", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "FAMAS | Djinn", "minFloat": 0.0, "maxFloat": 0.7 },
+          { "name": "M4A1-S | Hyper Beast", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "covert": [
+          { "name": "M4A4 | Poseidon", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "AK-47 | Vulcan", "minFloat": 0.0, "maxFloat": 0.9 }
+        ],
+        "rare": [
+          { "name": "Karambit", "finishes": ["Doppler", "Fade", "Tiger Tooth"] },
+          { "name": "M9 Bayonet", "finishes": ["Doppler", "Fade", "Tiger Tooth"] }
+        ]
+      }
+    },
+    {
+      "id": "chroma_3_case",
+      "name": "Chroma 3 Case",
+      "price": 2290,
+      "keyPrice": 2500,
+      "image": "chroma_3_case.png",
+      "contents": {
+        "milSpec": [
+          { "name": "SG 553 | Atlas", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "G3SG1 | Orange Crash", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "MP9 | Bioleak", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Dual Berettas | Ventilators", "minFloat": 0.0, "maxFloat": 0.7 },
+          { "name": "P2000 | Oceanic", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Sawed-Off | Fubar", "minFloat": 0.05, "maxFloat": 0.7 },
+          { "name": "P250 | Asiimov", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "restricted": [
+          { "name": "UMP-45 | Primal Saber", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "XM1014 | Black Tie", "minFloat": 0.0, "maxFloat": 0.92 },
+          { "name": "PP-Bizon | Judgement of Anubis", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "SSG 08 | Ghost Crusader", "minFloat": 0.0, "maxFloat": 0.68 },
+          { "name": "Tec-9 | Re-Entry", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "classified": [
+          { "name": "M4A1-S | Chantico's Fire", "minFloat": 0.0, "maxFloat": 0.5 },
+          { "name": "Galil AR | Firefight", "minFloat": 0.0, "maxFloat": 0.78 },
+          { "name": "AUG | Fleet Flock", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "covert": [
+          { "name": "AK-47 | Phantom Disruptor", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "M4A4 | Buzz Kill", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "rare": [
+          { "name": "Karambit", "finishes": ["Gamma Doppler", "Autotronic", "Lore"] },
+          { "name": "Butterfly Knife", "finishes": ["Gamma Doppler", "Autotronic", "Lore"] }
+        ]
+      }
+    },
+    {
+      "id": "kilowatt_case",
+      "name": "Kilowatt Case",
+      "price": 3000,
+      "keyPrice": 2500,
+      "image": "kilowatt_case.png",
+      "contents": {
+        "milSpec": [
+          { "name": "Tec-9 | Slag", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Nova | Dark Sigil", "minFloat": 0.0, "maxFloat": 0.7 },
+          { "name": "MAC-10 | Light Box", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "MP9 | Featherweight", "minFloat": 0.0, "maxFloat": 0.9 },
+          { "name": "UMP-45 | Motorized", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Dual Berettas | Hideout", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "Five-SeveN | Hybrid", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "restricted": [
+          { "name": "M4A1-S | Black Lotus", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Glock-18 | Block-18", "minFloat": 0.0, "maxFloat": 0.9 },
+          { "name": "M4A4 | Etch Lord", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "USP-S | Jawbreaker", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Zeus x27 | Olympus", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "classified": [
+          { "name": "AWP | Chrome Cannon", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Sawed-Off | Analog Input", "minFloat": 0.0, "maxFloat": 0.7 },
+          { "name": "P90 | Neoqueen", "minFloat": 0.0, "maxFloat": 0.8 }
+        ],
+        "covert": [
+          { "name": "AK-47 | Inheritance", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "USP-S | Printstream", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "rare": [
+          { "name": "Kukri Knife", "finishes": ["Doppler", "Fade", "Tiger Tooth", "Marble Fade"] },
+          { "name": "Karambit", "finishes": ["Doppler", "Fade", "Tiger Tooth"] }
+        ]
+      }
+    },
+    {
+      "id": "revolution_case",
+      "name": "Revolution Case",
+      "price": 2800,
+      "keyPrice": 2500,
+      "image": "revolution_case.png",
+      "contents": {
+        "milSpec": [
+          { "name": "R8 Revolver | Banana Cannon", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Tec-9 | Rebel", "minFloat": 0.0, "maxFloat": 0.9 },
+          { "name": "P90 | Neoqueen", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "MAC-10 | Sakkaku", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "P2000 | Wicked Sick", "minFloat": 0.0, "maxFloat": 0.95 },
+          { "name": "Glock-18 | Umbral Rabbit", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "Galil AR | Destroyer", "minFloat": 0.0, "maxFloat": 0.8 }
+        ],
+        "restricted": [
+          { "name": "AK-47 | Ice Coaled", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "M4A4 | Temukau", "minFloat": 0.0, "maxFloat": 0.9 },
+          { "name": "AWP | Duality", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "USP-S | Revolution", "minFloat": 0.0, "maxFloat": 0.8 },
+          { "name": "Desert Eagle | Ocean Drive", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "classified": [
+          { "name": "M4A1-S | Emphorosaur-S", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "P250 | Re.built", "minFloat": 0.0, "maxFloat": 0.85 },
+          { "name": "FAMAS | Rapid Eye Movement", "minFloat": 0.0, "maxFloat": 0.9 }
+        ],
+        "covert": [
+          { "name": "AK-47 | Head Shot", "minFloat": 0.0, "maxFloat": 1.0 },
+          { "name": "AWP | Chromatic Aberration", "minFloat": 0.0, "maxFloat": 1.0 }
+        ],
+        "rare": [
+          { "name": "Karambit", "finishes": ["Doppler", "Fade", "Gamma Doppler"] },
+          { "name": "Butterfly Knife", "finishes": ["Doppler", "Fade", "Gamma Doppler"] }
+        ]
+      }
+    }
+  ],
+  "chatMessages": {
+    "caseOpened": "{player} a deschis {skin} {wear} {credits} credite",
+    "rareDrop": "🎉 {player} a primit un item RAR: {skin}! 🎉",
+    "statTrak": "✨ StatTrak™ {skin} ✨",
+    "promotion": "Verifica-te pe !discord sau cs2-panel.ro"
+  }
+}

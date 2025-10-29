@@ -1,0 +1,926 @@
+{
+  "clanSystem": {
+    "enabled": true,
+    "maxMembers": 5,
+    "maxClanNameLength": 32,
+    "maxClanTagLength": 8,
+    "creationCost": 5000,
+    "inviteExpireHours": 24,
+    "inactiveKickDays": 30,
+    "levelSystem": {
+      "enabled": true,
+      "maxLevel": 100,
+      "experiencePerMission": 10,
+      "experiencePerKill": 1,
+      "experiencePerWin": 50,
+      "levelRewards": [
+        { "level": 5, "credits": 1000, "shopPoints": 5 },
+        { "level": 10, "credits": 2500, "shopPoints": 10 },
+        { "level": 25, "credits": 5000, "shopPoints": 25 },
+        { "level": 50, "credits": 10000, "shopPoints": 50 },
+        { "level": 75, "credits": 25000, "shopPoints": 100 },
+        { "level": 100, "credits": 50000, "shopPoints": 200 }
+      ]
+    },
+    "ranks": [
+      { "id": "member", "name": "Member", "permissions": ["view", "missions", "shop"] },
+      { "id": "moderator", "name": "Moderator", "permissions": ["view", "missions", "shop", "invite", "kick"] },
+      {
+        "id": "admin",
+        "name": "Admin",
+        "permissions": ["view", "missions", "shop", "invite", "kick", "promote", "settings"]
+      },
+      { "id": "leader", "name": "Leader", "permissions": ["all"] }
+    ]
+  },
+  "missions": {
+    "enabled": true,
+    "resetDaily": true,
+    "resetTime": "00:00",
+    "categories": [
+      {
+        "id": "fun",
+        "name": "Fun missions",
+        "color": "#00FF00",
+        "missions": [
+          {
+            "id": "jumper",
+            "name": "Jumper",
+            "description": "Jump 7200 times",
+            "requirement": 7200,
+            "reward": 500,
+            "shopPoints": 1
+          },
+          {
+            "id": "grenade_middle",
+            "name": "Grenade [Middle]",
+            "description": "Hit enemies with grenades in mid",
+            "requirement": 50,
+            "reward": 750,
+            "shopPoints": 2
+          },
+          {
+            "id": "the_writer",
+            "name": "The writer",
+            "description": "Write 1000 messages in chat",
+            "requirement": 1000,
+            "reward": 300,
+            "shopPoints": 1
+          }
+        ]
+      },
+      {
+        "id": "awp",
+        "name": "AWP missions",
+        "color": "#FF4444",
+        "missions": [
+          {
+            "id": "awp_killer",
+            "name": "AWP Killer",
+            "description": "Kill 100 enemies with AWP",
+            "requirement": 100,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "awp_damage",
+            "name": "AWP Damage",
+            "description": "Deal 50000 damage with AWP",
+            "requirement": 50000,
+            "reward": 1500,
+            "shopPoints": 3
+          },
+          {
+            "id": "awp_distance",
+            "name": "AWP Killer [Distance]",
+            "description": "Kill 50 enemies from 30m+ with AWP",
+            "requirement": 50,
+            "reward": 2500,
+            "shopPoints": 6
+          },
+          {
+            "id": "awp_minimum",
+            "name": "AWP Damage [Minimum]",
+            "description": "Deal minimum 80 damage per shot 100 times",
+            "requirement": 100,
+            "reward": 1800,
+            "shopPoints": 4
+          },
+          {
+            "id": "awp_smoke",
+            "name": "AWP Killer [Smoke]",
+            "description": "Kill 25 enemies through smoke with AWP",
+            "requirement": 25,
+            "reward": 3000,
+            "shopPoints": 8
+          },
+          {
+            "id": "awp_head",
+            "name": "AWP Damage [Head]",
+            "description": "Headshot 75 enemies with AWP",
+            "requirement": 75,
+            "reward": 2200,
+            "shopPoints": 5
+          },
+          {
+            "id": "awp_noscope",
+            "name": "AWP NoScope",
+            "description": "Kill 30 enemies without scoping",
+            "requirement": 30,
+            "reward": 3500,
+            "shopPoints": 10
+          },
+          {
+            "id": "awp_jumpshot",
+            "name": "AWP Jumpshot",
+            "description": "Kill 15 enemies while jumping",
+            "requirement": 15,
+            "reward": 4000,
+            "shopPoints": 12
+          }
+        ]
+      },
+      {
+        "id": "ak47",
+        "name": "AK-47 missions",
+        "color": "#FFA500",
+        "missions": [
+          {
+            "id": "ak47_killer",
+            "name": "AK-47 Killer",
+            "description": "Kill 150 enemies with AK-47",
+            "requirement": 150,
+            "reward": 1800,
+            "shopPoints": 4
+          },
+          {
+            "id": "ak47_headshot",
+            "name": "AK-47 Headshot",
+            "description": "Headshot 100 enemies with AK-47",
+            "requirement": 100,
+            "reward": 2500,
+            "shopPoints": 6
+          },
+          {
+            "id": "ak47_spray",
+            "name": "AK-47 Spray Control",
+            "description": "Kill 50 enemies with spray (5+ bullets)",
+            "requirement": 50,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "ak47_onetap",
+            "name": "AK-47 One Tap",
+            "description": "One tap headshot 75 enemies",
+            "requirement": 75,
+            "reward": 3000,
+            "shopPoints": 8
+          },
+          {
+            "id": "ak47_norecoil",
+            "name": "AK-47 No Recoil",
+            "description": "Kill 40 enemies with first 3 bullets",
+            "requirement": 40,
+            "reward": 2800,
+            "shopPoints": 7
+          },
+          {
+            "id": "ak47_distance",
+            "name": "AK-47 Long Range",
+            "description": "Kill 60 enemies from 25m+",
+            "requirement": 60,
+            "reward": 2200,
+            "shopPoints": 5
+          },
+          {
+            "id": "ak47_multikill",
+            "name": "AK-47 Multi Kill",
+            "description": "Get 20 double kills in one round",
+            "requirement": 20,
+            "reward": 3500,
+            "shopPoints": 9
+          },
+          {
+            "id": "ak47_ace",
+            "name": "AK-47 Ace",
+            "description": "Get 5 aces with AK-47",
+            "requirement": 5,
+            "reward": 5000,
+            "shopPoints": 15
+          },
+          {
+            "id": "ak47_wallbang",
+            "name": "AK-47 Wallbang",
+            "description": "Kill 30 enemies through walls",
+            "requirement": 30,
+            "reward": 2600,
+            "shopPoints": 6
+          }
+        ]
+      },
+      {
+        "id": "m4a1",
+        "name": "M4A1 missions",
+        "color": "#4169E1",
+        "missions": [
+          {
+            "id": "m4a1_killer",
+            "name": "M4A1 Killer",
+            "description": "Kill 150 enemies with M4A1",
+            "requirement": 150,
+            "reward": 1800,
+            "shopPoints": 4
+          },
+          {
+            "id": "m4a1_headshot",
+            "name": "M4A1 Headshot",
+            "description": "Headshot 100 enemies with M4A1",
+            "requirement": 100,
+            "reward": 2500,
+            "shopPoints": 6
+          },
+          {
+            "id": "m4a1_silenced",
+            "name": "M4A1 Silenced Killer",
+            "description": "Kill 80 enemies without being heard",
+            "requirement": 80,
+            "reward": 2800,
+            "shopPoints": 7
+          },
+          {
+            "id": "m4a1_burst",
+            "name": "M4A1 Burst Fire",
+            "description": "Kill 60 enemies with burst fire (3-5 bullets)",
+            "requirement": 60,
+            "reward": 2200,
+            "shopPoints": 5
+          },
+          {
+            "id": "m4a1_spray",
+            "name": "M4A1 Spray Control",
+            "description": "Kill 50 enemies with spray (6+ bullets)",
+            "requirement": 50,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "m4a1_distance",
+            "name": "M4A1 Long Range",
+            "description": "Kill 70 enemies from 25m+",
+            "requirement": 70,
+            "reward": 2400,
+            "shopPoints": 6
+          }
+        ]
+      },
+      {
+        "id": "famas",
+        "name": "FAMAS missions",
+        "color": "#9370DB",
+        "missions": [
+          {
+            "id": "famas_killer",
+            "name": "FAMAS Killer",
+            "description": "Kill 120 enemies with FAMAS",
+            "requirement": 120,
+            "reward": 1500,
+            "shopPoints": 3
+          },
+          {
+            "id": "famas_headshot",
+            "name": "FAMAS Headshot",
+            "description": "Headshot 80 enemies with FAMAS",
+            "requirement": 80,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "famas_burst",
+            "name": "FAMAS Burst Mode",
+            "description": "Kill 60 enemies in burst mode",
+            "requirement": 60,
+            "reward": 2200,
+            "shopPoints": 5
+          },
+          {
+            "id": "famas_auto",
+            "name": "FAMAS Auto Mode",
+            "description": "Kill 60 enemies in auto mode",
+            "requirement": 60,
+            "reward": 2200,
+            "shopPoints": 5
+          },
+          {
+            "id": "famas_eco",
+            "name": "FAMAS Eco Warrior",
+            "description": "Win 30 eco rounds with FAMAS",
+            "requirement": 30,
+            "reward": 2500,
+            "shopPoints": 6
+          },
+          {
+            "id": "famas_rush",
+            "name": "FAMAS Rush",
+            "description": "Get first kill in round 50 times",
+            "requirement": 50,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "famas_spray",
+            "name": "FAMAS Spray",
+            "description": "Kill 40 enemies with spray (7+ bullets)",
+            "requirement": 40,
+            "reward": 1800,
+            "shopPoints": 4
+          },
+          {
+            "id": "famas_multikill",
+            "name": "FAMAS Multi Kill",
+            "description": "Get 15 double kills",
+            "requirement": 15,
+            "reward": 2800,
+            "shopPoints": 7
+          }
+        ]
+      },
+      {
+        "id": "galil",
+        "name": "GALIL AR missions",
+        "color": "#FF6347",
+        "missions": [
+          {
+            "id": "galil_killer",
+            "name": "GALIL AR Killer",
+            "description": "Kill 120 enemies with GALIL AR",
+            "requirement": 120,
+            "reward": 1500,
+            "shopPoints": 3
+          },
+          {
+            "id": "galil_headshot",
+            "name": "GALIL AR Headshot",
+            "description": "Headshot 80 enemies with GALIL AR",
+            "requirement": 80,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "galil_spray",
+            "name": "GALIL AR Spray",
+            "description": "Kill 50 enemies with spray (7+ bullets)",
+            "requirement": 50,
+            "reward": 1800,
+            "shopPoints": 4
+          },
+          {
+            "id": "galil_eco",
+            "name": "GALIL AR Eco",
+            "description": "Win 30 eco rounds with GALIL AR",
+            "requirement": 30,
+            "reward": 2500,
+            "shopPoints": 6
+          },
+          {
+            "id": "galil_rush",
+            "name": "GALIL AR Rush",
+            "description": "Get first kill in round 50 times",
+            "requirement": 50,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "galil_distance",
+            "name": "GALIL AR Distance",
+            "description": "Kill 60 enemies from 20m+",
+            "requirement": 60,
+            "reward": 2200,
+            "shopPoints": 5
+          },
+          {
+            "id": "galil_multikill",
+            "name": "GALIL AR Multi Kill",
+            "description": "Get 15 double kills",
+            "requirement": 15,
+            "reward": 2800,
+            "shopPoints": 7
+          },
+          {
+            "id": "galil_ace",
+            "name": "GALIL AR Ace",
+            "description": "Get 3 aces with GALIL AR",
+            "requirement": 3,
+            "reward": 4000,
+            "shopPoints": 10
+          }
+        ]
+      },
+      {
+        "id": "aug",
+        "name": "AUG missions",
+        "color": "#20B2AA",
+        "missions": [
+          {
+            "id": "aug_killer",
+            "name": "AUG Killer",
+            "description": "Kill 120 enemies with AUG",
+            "requirement": 120,
+            "reward": 1500,
+            "shopPoints": 3
+          },
+          {
+            "id": "aug_headshot",
+            "name": "AUG Headshot",
+            "description": "Headshot 80 enemies with AUG",
+            "requirement": 80,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "aug_scoped",
+            "name": "AUG Scoped Killer",
+            "description": "Kill 70 enemies while scoped",
+            "requirement": 70,
+            "reward": 2200,
+            "shopPoints": 5
+          },
+          {
+            "id": "aug_noscope",
+            "name": "AUG No Scope",
+            "description": "Kill 50 enemies without scoping",
+            "requirement": 50,
+            "reward": 2400,
+            "shopPoints": 6
+          },
+          {
+            "id": "aug_distance",
+            "name": "AUG Long Range",
+            "description": "Kill 60 enemies from 30m+",
+            "requirement": 60,
+            "reward": 2500,
+            "shopPoints": 6
+          },
+          {
+            "id": "aug_spray",
+            "name": "AUG Spray Control",
+            "description": "Kill 50 enemies with spray (7+ bullets)",
+            "requirement": 50,
+            "reward": 1800,
+            "shopPoints": 4
+          },
+          {
+            "id": "aug_burst",
+            "name": "AUG Burst Fire",
+            "description": "Kill 60 enemies with burst (3-5 bullets)",
+            "requirement": 60,
+            "reward": 2000,
+            "shopPoints": 5
+          },
+          {
+            "id": "aug_multikill",
+            "name": "AUG Multi Kill",
+            "description": "Get 15 double kills",
+            "requirement": 15,
+            "reward": 2800,
+            "shopPoints": 7
+          }
+        ]
+      }
+    ]
+  },
+  "shop": {
+    "enabled": true,
+    "currency": "shopPoints",
+    "items": [
+      {
+        "id": "credits_1000",
+        "name": "Credits: 1000",
+        "description": "Buy 1000 credits for your account",
+        "price": 1,
+        "type": "credits",
+        "value": 1000,
+        "icon": "💰"
+      },
+      {
+        "id": "credits_5000",
+        "name": "Credits: 5000",
+        "description": "Buy 5000 credits for your account",
+        "price": 4,
+        "type": "credits",
+        "value": 5000,
+        "icon": "💰"
+      },
+      {
+        "id": "credits_10000",
+        "name": "Credits: 10000",
+        "description": "Buy 10000 credits for your account",
+        "price": 7,
+        "type": "credits",
+        "value": 10000,
+        "icon": "💰"
+      },
+      {
+        "id": "ak47_oligarch",
+        "name": "AK-47 | The Oligarch",
+        "description": "Rent AK-47 | The Oligarch for 30 days",
+        "price": 16,
+        "type": "skin",
+        "weapon": "weapon_ak47",
+        "skinId": "cu_ak47_asiimov",
+        "duration": 30,
+        "icon": "🔫"
+      },
+      {
+        "id": "m4a4_throttle",
+        "name": "M4A4 | Full Throttle",
+        "description": "Rent M4A4 | Full Throttle for 30 days",
+        "price": 15,
+        "type": "skin",
+        "weapon": "weapon_m4a1",
+        "skinId": "cu_m4a4_full_throttle",
+        "duration": 30,
+        "icon": "🔫"
+      },
+      {
+        "id": "awp_ice_coaled",
+        "name": "AWP | Ice Coaled",
+        "description": "Rent AWP | Ice Coaled for 30 days",
+        "price": 15,
+        "type": "skin",
+        "weapon": "weapon_awp",
+        "skinId": "cu_awp_ice_coaled",
+        "duration": 30,
+        "icon": "🔫"
+      },
+      {
+        "id": "jumper",
+        "name": "Jumper",
+        "description": "Unlock jumper ability permanently",
+        "price": 50,
+        "type": "ability",
+        "ability": "jumper",
+        "permanent": true,
+        "icon": "🦘"
+      },
+      {
+        "id": "bhop",
+        "name": "Bhop",
+        "description": "Unlock bhop ability permanently",
+        "price": 75,
+        "type": "ability",
+        "ability": "bhop",
+        "permanent": true,
+        "icon": "🏃"
+      },
+      {
+        "id": "speed_boost",
+        "name": "Speed Boost",
+        "description": "Unlock speed boost permanently",
+        "price": 60,
+        "type": "ability",
+        "ability": "speed",
+        "permanent": true,
+        "icon": "⚡"
+      },
+      {
+        "id": "vip_starter_7d",
+        "name": "VIP Starter - 7 days",
+        "description": "Get VIP Starter rank for 7 days",
+        "price": 25,
+        "type": "vip",
+        "vipLevel": "starter",
+        "duration": 7,
+        "icon": "⭐"
+      },
+      {
+        "id": "vip_pro_7d",
+        "name": "VIP Pro - 7 days",
+        "description": "Get VIP Pro rank for 7 days",
+        "price": 50,
+        "type": "vip",
+        "vipLevel": "pro",
+        "duration": 7,
+        "icon": "🌟"
+      },
+      {
+        "id": "vip_legend_7d",
+        "name": "VIP Legend - 7 days",
+        "description": "Get VIP Legend rank for 7 days",
+        "price": 100,
+        "type": "vip",
+        "vipLevel": "legend",
+        "duration": 7,
+        "icon": "💎"
+      }
+    ]
+  },
+  "tagGenerator": {
+    "enabled": true,
+    "maxLength": 8,
+    "allowedCharacters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_[]{}",
+    "forbiddenWords": ["admin", "mod", "owner", "staff", "helper"],
+    "colorCodes": true,
+    "templates": [
+      { "id": "brackets", "format": "[{tag}]", "example": "[CLAN]" },
+      { "id": "arrows", "format": ">{tag}<", "example": ">CLAN<" },
+      { "id": "stars", "format": "★{tag}★", "example": "★CLAN★" },
+      { "id": "simple", "format": "{tag}", "example": "CLAN" },
+      { "id": "dots", "format": "•{tag}•", "example": "•CLAN•" }
+    ]
+  },
+  "leaderboards": {
+    "enabled": true,
+    "updateInterval": 300,
+    "categories": [
+      {
+        "id": "missions",
+        "name": "Top clans [Missions]",
+        "sortBy": "totalMissions",
+        "displayCount": 10,
+        "color": "#FF4444"
+      },
+      {
+        "id": "level",
+        "name": "Top clans [Level]",
+        "sortBy": "level",
+        "displayCount": 10,
+        "color": "#44FF44"
+      },
+      {
+        "id": "members",
+        "name": "Top clans [Members]",
+        "sortBy": "memberCount",
+        "displayCount": 10,
+        "color": "#4444FF"
+      },
+      {
+        "id": "kills",
+        "name": "Top clans [Kills]",
+        "sortBy": "totalKills",
+        "displayCount": 10,
+        "color": "#FFA500"
+      },
+      {
+        "id": "credits",
+        "name": "Top clans [Credits]",
+        "sortBy": "totalCredits",
+        "displayCount": 10,
+        "color": "#FFD700"
+      }
+    ]
+  },
+  "notifications": {
+    "enabled": true,
+    "showInChat": true,
+    "showInCenter": true,
+    "sounds": true,
+    "types": {
+      "clanCreated": { "enabled": true, "message": "{player} has created clan {clan}!", "color": "#00FF00" },
+      "clanDeleted": { "enabled": true, "message": "Clan {clan} has been deleted!", "color": "#FF0000" },
+      "memberJoined": { "enabled": true, "message": "{player} has joined clan {clan}!", "color": "#00FF00" },
+      "memberLeft": { "enabled": true, "message": "{player} has left clan {clan}!", "color": "#FFA500" },
+      "memberKicked": { "enabled": true, "message": "{player} has been kicked from clan {clan}!", "color": "#FF0000" },
+      "memberPromoted": {
+        "enabled": true,
+        "message": "{player} has been promoted to {rank} in clan {clan}!",
+        "color": "#FFD700"
+      },
+      "missionCompleted": {
+        "enabled": true,
+        "message": "{player} completed mission {mission} for clan {clan}!",
+        "color": "#00FF00"
+      },
+      "levelUp": { "enabled": true, "message": "Clan {clan} reached level {level}!", "color": "#FFD700" },
+      "shopPurchase": { "enabled": true, "message": "{player} purchased {item} from clan shop!", "color": "#4169E1" },
+      "donation": {
+        "enabled": true,
+        "message": "{player} donated {amount} credits to clan {clan}!",
+        "color": "#00FF00"
+      }
+    }
+  },
+  "database": {
+    "saveInterval": 60,
+    "autoBackup": true,
+    "backupInterval": 3600
+  },
+  "commands": {
+    "prefix": "!",
+    "aliases": {
+      "clan": ["c", "clans"],
+      "claninfo": ["ci", "info"],
+      "claninvite": ["cinvite", "invite"],
+      "clankick": ["ckick", "kick"],
+      "clanleave": ["cleave", "leave"],
+      "clandelete": ["cdelete", "delete"],
+      "clandonate": ["cdonate", "donate"],
+      "clantop": ["ctop", "top"],
+      "clanshop": ["cshop", "shop"],
+      "clanmissions": ["cmissions", "missions"]
+    }
+  },
+  "creditRewards": {
+    "enabled": true,
+    "playtime": {
+      "enabled": true,
+      "creditsPerMinute": 10,
+      "creditsPerHour": 600,
+      "minimumPlaytimeSeconds": 60,
+      "afkDetection": true,
+      "afkTimeoutSeconds": 120
+    },
+    "mvp": {
+      "enabled": true,
+      "creditsPerMVP": 50,
+      "bonusForStreak": true,
+      "streakBonus": {
+        "3": 25,
+        "5": 50,
+        "10": 150
+      }
+    },
+    "kills": {
+      "enabled": true,
+      "creditsPerKill": 5,
+      "headshot": {
+        "enabled": true,
+        "creditsPerHeadshot": 15,
+        "bonusMultiplier": 1.5
+      },
+      "wallbang": {
+        "enabled": true,
+        "creditsPerWallbang": 20
+      },
+      "noscope": {
+        "enabled": true,
+        "creditsPerNoscope": 25
+      },
+      "knife": {
+        "enabled": true,
+        "creditsPerKnifeKill": 100
+      },
+      "multiKill": {
+        "enabled": true,
+        "double": 30,
+        "triple": 75,
+        "quadra": 150,
+        "ace": 300
+      }
+    },
+    "bombDefuse": {
+      "enabled": true,
+      "creditsPerDefuse": 100,
+      "lastSecondBonus": {
+        "enabled": true,
+        "timeThreshold": 5,
+        "bonusCredits": 150
+      }
+    },
+    "bombPlant": {
+      "enabled": true,
+      "creditsPerPlant": 50,
+      "successfulExplosion": {
+        "enabled": true,
+        "bonusCredits": 100
+      }
+    },
+    "roundWin": {
+      "enabled": true,
+      "creditsPerWin": 25,
+      "mvpBonus": {
+        "enabled": true,
+        "bonusCredits": 25
+      },
+      "cleanSweep": {
+        "enabled": true,
+        "bonusCredits": 100
+      }
+    },
+    "assists": {
+      "enabled": true,
+      "creditsPerAssist": 3,
+      "flashAssist": {
+        "enabled": true,
+        "creditsPerFlashAssist": 5
+      }
+    },
+    "hostageRescue": {
+      "enabled": true,
+      "creditsPerHostage": 75,
+      "allHostagesBonus": {
+        "enabled": true,
+        "bonusCredits": 200
+      }
+    },
+    "damage": {
+      "enabled": true,
+      "creditsPerDamage": 0.1,
+      "minimumDamage": 100
+    },
+    "survivalBonus": {
+      "enabled": true,
+      "creditsPerSurvival": 10,
+      "fullHealthBonus": {
+        "enabled": true,
+        "bonusCredits": 20
+      }
+    }
+  },
+  "creditNotifications": {
+    "enabled": true,
+    "showInChat": true,
+    "showInCenter": false,
+    "soundEnabled": true,
+    "playtime": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {yellow}{minutes} minute{default} jucate!",
+      "interval": 5
+    },
+    "mvp": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {yellow}MVP{default}!",
+      "streakMessage": "{green}[Credits]{default} {yellow}MVP Streak x{streak}!{default} Bonus: {lightgreen}+{bonus} credite{default}!"
+    },
+    "kill": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru kill!",
+      "showPerKill": false,
+      "showRoundSummary": true,
+      "roundSummaryMessage": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {yellow}{kills} kill-uri{default} runda aceasta!"
+    },
+    "headshot": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {red}HEADSHOT{default}!",
+      "showPerHeadshot": false,
+      "showRoundSummary": true,
+      "roundSummaryMessage": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {red}{count} HS Kills{default} runda aceasta!"
+    },
+    "wallbang": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {purple}WALLBANG{default}!",
+      "showPerWallbang": true
+    },
+    "noscope": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {yellow}NOSCOPE{default}!",
+      "showPerNoscope": true
+    },
+    "knife": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {red}KNIFE KILL{default}!",
+      "showPerKnife": true
+    },
+    "multiKill": {
+      "enabled": true,
+      "doubleKill": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {yellow}DOUBLE KILL{default}!",
+      "tripleKill": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {orange}TRIPLE KILL{default}!",
+      "quadraKill": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {red}QUADRA KILL{default}!",
+      "ace": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {purple}ACE{default}!",
+      "showPerMultiKill": true
+    },
+    "bombDefuse": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {blue}defuzarea bombei{default}!",
+      "lastSecondMessage": "{green}[Credits]{default} {red}CLUTCH DEFUSE!{default} Bonus: {lightgreen}+{bonus} credite{default}!"
+    },
+    "bombPlant": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {orange}plantarea bombei{default}!",
+      "explosionMessage": "{green}[Credits]{default} Bomba a explodat! Bonus: {lightgreen}+{bonus} credite{default}!"
+    },
+    "roundWin": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {yellow}runda castigata{default}!",
+      "mvpBonusMessage": "{green}[Credits]{default} {yellow}MVP Bonus!{default} +{lightgreen}{bonus} credite{default}!",
+      "cleanSweepMessage": "{green}[Credits]{default} {red}CLEAN SWEEP!{default} Bonus: {lightgreen}+{bonus} credite{default}!"
+    },
+    "assist": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {blue}assist{default}!",
+      "showPerAssist": false,
+      "showRoundSummary": true,
+      "roundSummaryMessage": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {blue}{count} assists{default} runda aceasta!"
+    },
+    "flashAssist": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} +{lightgreen}{credits} credite{default} pentru {yellow}flash assist{default}!",
+      "showPerFlashAssist": true
+    },
+    "hostageRescue": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {blue}salvarea ostaticului{default}!",
+      "allHostagesMessage": "{green}[Credits]{default} {yellow}TOTI OSTATICII SALVATI!{default} Bonus: {lightgreen}+{bonus} credite{default}!"
+    },
+    "damage": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {red}{totalDamage} damage{default} dat runda aceasta!",
+      "showRoundSummary": true
+    },
+    "survival": {
+      "enabled": true,
+      "message": "{green}[Credits]{default} Ai castigat {lightgreen}{credits} credite{default} pentru {yellow}supravietuire{default}!",
+      "fullHealthMessage": "{green}[Credits]{default} FULL HEALTH! Bonus: {lightgreen}+{bonus} credite{default}!"
+    }
+  }
+}
